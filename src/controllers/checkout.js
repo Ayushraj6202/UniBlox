@@ -6,6 +6,7 @@ import generateDiscountCode from '../utils/generateDiscountCode.js';
 const checkout = async (req,res)=>{
     try {
         const {clientId, discountCode } = req.body;
+        console.log("check out ",clientId,discountCode);
         if(!clientId){
             return res.status(401).json({"msg":"Who are you"});
         }

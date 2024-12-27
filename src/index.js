@@ -7,6 +7,7 @@ import connectDB from './ConnectDB.js'
 dotenv.config({
     path:"./.env"
 })
+
 connectDB();
 const app = express();
 
@@ -16,9 +17,11 @@ app.use(express.json());
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}));
 
+import adminrouter from './routes/admin.routes.js';
+import orderRouter from './routes/order.routes.js';
 
-
-
+app.use('/api/admin',adminrouter);
+app.use('/api/order',orderRouter);
 
 
 
