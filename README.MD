@@ -29,7 +29,36 @@
    - `productId`
    - `clientId`
    - `quantity`
-
+##### Sample Outputs:
+```json
+    {
+    "cart": {
+        "_id": "676ea434e6dfffb1cb8b04c2",
+        "clientId": "1",
+        "total": 600,
+        "items": [
+            {
+                "productId": "p2",
+                "name": "Phone",
+                "price": 500,
+                "quantity": 1,
+                "_id": "676ea434e6dfffb1cb8b04c3"
+            },
+            {
+                "productId": "p3",
+                "name": "Headphones",
+                "price": 100,
+                "quantity": 1,
+                "_id": "676ea448e6dfffb1cb8b04c7"
+            }
+        ],
+        "createdAt": "2024-12-27T12:57:24.921Z",
+        "updatedAt": "2024-12-27T12:57:44.475Z",
+        "__v": 1
+    },
+    "msg": "Product added to cart successfully"
+}
+```
 ---
 
 #### 2. Checkout Route

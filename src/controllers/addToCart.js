@@ -39,10 +39,11 @@ const addToCart = async (req, res) => {
             );
         }
         cart.total += quantity * product.price;
-        console.log(cart);
+        // console.log(cart);
 
         await cart.save({ validateBeforeSave: false });
-        return res.status(200).json({ "msg": "Product added to cart successfully" });
+
+        return res.status(200).json({ cart,"msg": "Product added to cart successfully" });
     } catch (error) {
         return res.status(500).json({ "msg": "Internal server error" });
     }
