@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const CartSchema = new mongoose.Schema(
     {
+        clientId :{type:String,required:true},
         items: [
             {
                 productId: String,
@@ -14,7 +15,6 @@ const CartSchema = new mongoose.Schema(
             type: Number,
             default: 0
         },
-
     },
     { timestamps: true }
 );
